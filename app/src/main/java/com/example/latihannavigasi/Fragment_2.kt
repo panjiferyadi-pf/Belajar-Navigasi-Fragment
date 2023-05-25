@@ -9,16 +9,16 @@ import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.example.latihannavigasi.databinding.Fragment2Binding
 
-class Fragment_2 : Fragment() {
+class Fragment2 : Fragment() {
     private lateinit var binding: Fragment2Binding
     //Menyiapkan argument
-    val args: Fragment_2Args by navArgs()
+    val args: Fragment2Args by navArgs()
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = Fragment2Binding.inflate(layoutInflater, container, false)
         return binding.root
     }
@@ -26,7 +26,7 @@ class Fragment_2 : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         //Menyiapkan
-        var myName = args.name
+        val myName = args.name
         binding.tvName.text = myName.toString()
         //Memberikan aksi pada btnToFragment1
         binding.btnToFragment1.setOnClickListener {
