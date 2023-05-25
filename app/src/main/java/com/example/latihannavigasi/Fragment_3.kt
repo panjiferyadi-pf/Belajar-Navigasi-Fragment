@@ -29,8 +29,9 @@ class Fragment3 : Fragment() {
         }
 
         binding.btnToFragment2.setOnClickListener{
+            val action = Fragment3Directions.actionFragment3ToFragment2("panji")
             this.findNavController()
-                .navigate(R.id.action_fragment_3_to_fragment_2)
+                .navigate(action)
         }
     }
 
